@@ -1,6 +1,6 @@
 {
   "homepage": "https://MdMassum.github.io/textUtils",
-  "name": "textutil",
+  "name": "textUtils",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
