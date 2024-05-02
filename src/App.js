@@ -69,7 +69,7 @@ function App() {
     </div>
 
     <div className="container">
-    <Textform showAlert={showAlert} heading="Enter Your Text"/>
+    <Textform showAlert={showAlert} heading="TextUtils - Word Counter, Character Counter"/>
     </div>
 
     {/* <div className="container">

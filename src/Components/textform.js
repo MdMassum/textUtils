@@ -33,12 +33,12 @@ export default function Textform(props) {
   return (
     <>
     <div className="form-group my-3">
-        <label for="exampleFormControlTextarea1">{props.heading}</label>
+        <label for="exampleFormControlTextarea1"><h2 className='mb-2'>{props.heading}</h2></label>
         <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange}></textarea>
     </div>
-    <button className="btn btn-primary mx-2 my-1" onClick={handleOnClick}>Convert To UpperCase</button>
-    <button className="btn btn-primary mx-2 my-1" onClick={handleLwClick}>Convert To LowerCase</button>
-    <button className="btn btn-primary mx-2 my-1" onClick={handleClClick}>Clear</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleOnClick}>Convert To UpperCase</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleLwClick}>Convert To LowerCase</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleClClick}>Clear</button>
     <hr />
     <div className="">
       <h3 className="my-2">Your Text Summary : </h3>
