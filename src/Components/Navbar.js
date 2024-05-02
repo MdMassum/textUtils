@@ -21,10 +21,10 @@ export default function Navbar (props) {
       </ul>
       {/* color palettes */}
       <div className="d-flex">
-        <div onClick={()=>{props.togglemode('primary')}} className="bg-primary rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
-        <div onClick={()=>{props.togglemode('danger')}} className="bg-danger rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
-        <div onClick={()=>{props.togglemode('success')}} className="bg-success rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
-        <div onClick={()=>{props.togglemode('warning')}} className="bg-warning rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('primary')}} className="bg-primary rounded mx-2 my-1" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('danger')}} className="bg-danger rounded mx-2 my-1" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('success')}} className="bg-success rounded mx-2 my-1" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('warning')}} className="bg-warning rounded mx-2 my-1" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
       </div>
 
       <form className="d-flex" role="search">
