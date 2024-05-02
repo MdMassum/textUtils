@@ -36,13 +36,13 @@ export default function Textform(props) {
         <label for="exampleFormControlTextarea1">{props.heading}</label>
         <textarea className="form-control" id="exampleFormControlTextarea1" rows="8" value={text} onChange={handleOnChange}></textarea>
     </div>
-    <button className="btn btn-primary" onClick={handleOnClick}>Convert To UpperCase</button>
-    <button className="btn btn-primary mx-3" onClick={handleLwClick}>Convert To LowerCase</button>
-    <button className="btn btn-primary mx-3" onClick={handleClClick}>Clear</button>
+    <button className="btn btn-primary mx-2 my-1" onClick={handleOnClick}>Convert To UpperCase</button>
+    <button className="btn btn-primary mx-2 my-1" onClick={handleLwClick}>Convert To LowerCase</button>
+    <button className="btn btn-primary mx-2 my-1" onClick={handleClClick}>Clear</button>
     <hr />
     <div className="">
       <h3 className="my-2">Your Text Summary : </h3>
-      <p className="">Total Words :{text.split(" ").length} Total characters : {text.length}</p> 
+      <p className="">Total Words :{text.split(" ").filter((elem)=>{return elem.length!==0}).length} Total characters : {text.length}</p> 
       <hr />
       <h3>Preview</h3>
       <p>{text.length >0?text:"Enter Your text to Preview..."}</p>
