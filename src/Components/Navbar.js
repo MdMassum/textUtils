@@ -19,9 +19,17 @@ export default function Navbar (props) {
           <a className="nav-link" href="/">Link</a>
         </li>
       </ul>
+      {/* color palettes */}
+      <div className="d-flex">
+        <div onClick={()=>{props.togglemode('primary')}} className="bg-primary rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('danger')}} className="bg-danger rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('success')}} className="bg-success rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+        <div onClick={()=>{props.togglemode('warning')}} className="bg-warning rounded mx-2" style={{height:'30px',width:'30px',cursor:'pointer'}}></div>
+      </div>
+
       <form className="d-flex" role="search">
         <div className={`form-check form-switch text-${(props.mode === 'light'?"Dark":"light")}`}>
-        <input className="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.togglemode}/>
+        <input className="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={()=>{props.togglemode(null)}}/>
         <label className="form-check-label" htmlFor="flexSwitchCheckDefault"><b>Enable Dark Mode</b></label>
       </div>
       </form>

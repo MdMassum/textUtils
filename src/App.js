@@ -37,7 +37,17 @@ function App() {
   }
 
   // for dark mode 
-  const togglemode =()=>{
+  const removeBodyClass=()=>{
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-warning');
+  }
+  const togglemode =(cls)=>{
+    removeBodyClass();
+    document.body.classList.add('bg-'+cls);
     if(mode === "light"){
       setMode("dark");
       document.body.style.backgroundColor = "#1a316b";
@@ -47,7 +57,7 @@ function App() {
       document.querySelector("textarea").style.color = "white";
 
       // alert message
-      showAlert(": Dark Mode is Enabled","success");
+      // showAlert(": Dark Mode is Enabled","success");
 
     }
     else{
@@ -57,7 +67,7 @@ function App() {
       document.querySelector("textarea").style.backgroundColor = "white";
 
       // alert msg
-      showAlert(": Light Mode is Enabled","success");
+      // showAlert(": Light Mode is Enabled","success");
     }
   }
   return (
